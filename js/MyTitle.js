@@ -1,14 +1,13 @@
-/* eslint react/prop-types:0 */
-import React from 'react'
-const div = React.DOM.div
-const h1 = React.DOM.h1
+var React = require('react')
+var div = React.DOM.div
+var h1 = React.DOM.h1
 
-const MyTitle = React.createClass({
+var MyTitle = React.createClass({
   render () {
-    const style = {color: this.props.color}
+    const propfn = {color: this.props.color}
     return (
       <div>
-        <h1 style={style}>
+        <h1 style={propfn}>
           {this.props.title}
         </h1>
       </div>
@@ -16,4 +15,4 @@ const MyTitle = React.createClass({
   }
 })
 
-export default MyTitle
+module.exports = MyTitle

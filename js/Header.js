@@ -6,9 +6,9 @@ const { func, bool, string } = React.PropTypes
 
 const Header = React.createClass({
   propTypes: {
+    dispatch: func,
     showSearch: bool,
-    searchTerm: string,
-    dispatch: func
+    searchTerm: string
   },
   handleSearchTermChange (event) {
     this.props.dispatch(setSearchTerm(event.target.value))
@@ -21,7 +21,7 @@ const Header = React.createClass({
       utilSpace = (
         <h2 className='header-back'>
           <Link to='/search'>
-            Back
+            Back To All Shows
           </Link>
         </h2>
       )
